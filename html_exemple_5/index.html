@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang='fr'>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<!-- Si besoin feuille de style externe
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		-->
+		<!-- Si besoin style interne 
+		<style></style> 
+		-->
+		<!-- Si besoin script externe 
+		<script src="./script.js"></script>	
+		-->
+	</head>
+	<body>
+		<form onreset="resetCalcul();">
+			<input type="text" id="num1" name="num1">
+			<br>
+			<input type="text" id="num2" name="num2">
+			<br>
+			<input type="button" value="OK" onclick="afficherSomme()">
+			<input type="reset" value="effacer">
+		</form>
+		
+		<p id="resultat" style="display: none;">:D</p>
+
+	
+		<script>
+						
+			function afficherSomme() {
+				var resultat = document.getElementById("resultat");
+				resultat.style.display = "block";
+				var num1 = document.getElementById("num1");
+				var num2 = document.getElementById("num2");
+				var somme = parseFloat(num1.value) + parseFloat(num2.value);
+				
+				if(somme == NaN) {
+					resultat.innerHTML = "Not a number !";
+				} else {resultat.innerHTML = `${num1.value} + ${num2.value} = ${somme}`;}	
+			}
+			
+			function resetCalcul() {
+				var resultat = document.getElementById("resultat");
+				resultat.style.display = "none";
+				
+			}
+		</script>
+
+	
+	
+		<!-- Si besoin jQuery
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>    
+		-->
+		<!-- Si besoin script interne
+		<script>
+		</script>
+		  -->
+	</body>
+</html>
