@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang='fr'>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<!-- Si besoin feuille de style externe
+		<link rel="stylesheet" type="text/css" href="style.css" />-->
+		
+		<!-- Si besoin style interne 	-->
+		<style>
+			* {
+				padding-top: 3px;
+				margin: 7px;
+			}
+
+			label {
+				display: inline-block;
+				width: 6%;
+			}
+
+			input {
+				margin: 5px;
+			}
+
+			.button {
+				display: inline-flex;
+			    height: 40px;
+				width: 150px;
+				border: 2px solid #BFC0C0;
+				margin: 20px 20px 20px 20px;
+				color: #BFC0C0;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: .8em;
+				letter-spacing: 1.5px;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+			#spin {
+				width: 0;
+				height: 0;
+				opacity: 0;
+				left: 70px;
+				top: 20px;
+				transform: rotate(0deg);
+				background: none;
+				position: absolute;
+				transition: all .5s ease-Out;
+			}
+
+		</style> 
+	
+		<!-- Si besoin script externe -->
+		<script src="main.js"></script>
+		
+	</head>
+	<body>
+
+		<form>
+			<div>
+				<input type="radio" name="gender" value="homme">
+				<label for="gender">Monsieur</label>
+				<input type="radio" name="gender" value="femme">
+				<label for="gender">Madame</label>
+				<input type="radio" name="gender" value="mademoiselle">
+				<label for="gender">Mademoiselle</label>
+			</div>
+
+
+			<label for="nom">Nom:</label>
+			<input type="text" id="nom"><br>
+			<label for="prenom">Prénom:</label>
+			<input type="text" id="prenom"><br>
+			<label for="addresse">Addresse:</label>
+			<input type="text" id="addresse"><br>
+			<label for="code">Code postal:</label>
+			<input type="text" id="code"><br>
+			<label for="ville">Ville:</label>
+			<input type="text" id="ville"><br>
+			<input type="button" id="btn" class="button" value="Soumettre" onclick="analyser()">
+			<div id="panel" style="visibility: none;"></div>
+		</form>
+		<!-- Si besoin jQuery
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>    
+		-->
+		<!-- Si besoin script interne-->
+	</body>
+</html>
